@@ -98,6 +98,9 @@ link h = if h < 100 then " and " else " "
 -- link h | h < 100 = " and "
 --        | otherwise = " "
 
+convert 308000
+convert 369027
+
 double :: Integer -> Integer
 double x = 2 * x
 
