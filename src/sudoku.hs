@@ -16,7 +16,7 @@ blank :: Digit -> Bool
 blank = (== '0')
 
 solve :: Grid -> [Grid]
-solve = filter valid . expand . many prune . choices 
+solve = filter valid . completions
 
 completions :: Grid -> [Grid]
 completions = expand . many prune . choices
@@ -90,3 +90,6 @@ expand1 rows = [rows ++ [row1 ++ [c]:row2] ++ rows2 | c <- cs]
 single :: [a] -> Bool
 single [_] = True
 single _ = False
+
+minimum :: (Ord a) => [a] -> a
+minimum = foldr1 (\x y -> if x < y then x else y)
