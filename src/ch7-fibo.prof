@@ -1,0 +1,23 @@
+	Tue Jun  2 21:28 2015 Time and Allocation Profiling Report  (Final)
+
+	   fibo +RTS -p -RTS
+
+	total time  =        0.33 secs   (325 ticks @ 1000 us, 1 processor)
+	total alloc = 409,315,048 bytes  (excludes profiling overheads)
+
+COST CENTRE MODULE    %time %alloc
+
+fib         Main      100.0  100.0
+
+
+                                                       individual     inherited
+COST CENTRE  MODULE                  no.     entries  %time %alloc   %time %alloc
+
+MAIN         MAIN                     45           0    0.0    0.0   100.0  100.0
+ CAF         Main                     89           0    0.0    0.0   100.0  100.0
+  main       Main                     90           1    0.0    0.0   100.0  100.0
+   fib       Main                     91     2692537  100.0  100.0   100.0  100.0
+ CAF         GHC.Conc.Signal          84           0    0.0    0.0     0.0    0.0
+ CAF         GHC.IO.Encoding          77           0    0.0    0.0     0.0    0.0
+ CAF         GHC.IO.Encoding.Iconv    75           0    0.0    0.0     0.0    0.0
+ CAF         GHC.IO.Handle.FD         68           0    0.0    0.0     0.0    0.0
